@@ -7,7 +7,7 @@ const Hero = () => (
     <motion.img
       src={logo}
       alt="FlipScore logo"
-      className="mb-10 h-12 w-auto"
+      className="mb-12 h-16 w-auto md:h-20"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
