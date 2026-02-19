@@ -1,7 +1,7 @@
 import ScrollReveal from "./ScrollReveal";
 
 const problems = [
-  { title: "Lost in the Score", description: "Players lose track mid-rally, interrupting the flow of the game." },
+  { title: "Lost in the Score", description: "Players and spectators lose track mid-match, interrupting the flow of the game." },
   { title: "Constant Interruptions", description: "Matches pause repeatedly as players debate the current score." },
   { title: "Unorganized Courts", description: "Without clear scoring, courts feel chaotic and unprofessional." },
 ];
