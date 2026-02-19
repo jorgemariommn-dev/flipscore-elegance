@@ -12,7 +12,7 @@ const Footer = () => (
       </div>
 
       <div className="flex items-center gap-6">
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-secondary transition-colors hover:text-foreground">
+        <a href="https://www.instagram.com/flipscorepadel/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-secondary transition-colors hover:text-foreground">
           <Instagram className="h-5 w-5" strokeWidth={1.5} />
         </a>
         <a href="mailto:flipscorepadel@gmail.com" aria-label="Email" className="text-secondary transition-colors hover:text-foreground">
