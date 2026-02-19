@@ -1,7 +1,7 @@
 import ScrollReveal from "./ScrollReveal";
 
 const cases = [
-  { who: "Clubs", benefit: "Elevate the player experience with refined court details." },
+  { who: "Clubs", benefit: "Elevate the player and spectator experience with refined court details." },
   { who: "Coaches", benefit: "Manage matches and training sessions with ease." },
   { who: "Players", benefit: "Stay focused on the game — not the score." },
 ];
