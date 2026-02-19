@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/flipscore-logo-green.jpg";
+import logo from "@/assets/flipscore-logo-transparent-green.png";
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
