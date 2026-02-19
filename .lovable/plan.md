@@ -1,56 +1,76 @@
 
+# Pre-Order Form Modal
 
-# FlipScore — Premium Landing Page
+## What We're Building
 
-## Overview
-A single-page, elegant landing page for FlipScore, a magnetic scoreboard for padel courts. The design will evoke luxury sports clubs and boutique hospitality — minimal, refined, and confident.
+A modal dialog (overlay popup) will appear when a visitor clicks any "Pre-Order Now" or "Upgrade Your Court" button. It collects:
 
-## Brand Setup
-- **Color palette**: Deep Forest Green (#1E3A2F), Soft Cream (#F5F3EE), Muted Green (#5C7A6B), Light Gray (#D9D9D9), Soft Gold accent (#C8A96A)
-- **Typography**: Playfair Display for headings (elegant serif), Inter for body text (clean sans-serif), italic serif accents for taglines
-- **Assets**: FlipScore logo and product render image embedded throughout the page
+- Full Name
+- Email
+- Club Name
+- Location
 
-## Page Sections (Top to Bottom)
+On submission, the form data is sent directly to **flipscorepadel@gmail.com** via the free [Formspree](https://formspree.io) service — no backend or account needed.
 
-### 1. Hero Section (Full Screen)
-Large serif headline "*Effortless Padel Scoring.*" with refined subheadline on a soft cream background. Two CTAs: "Pre-Order Now" (green) and "View Product" (outline). Subtle fade-in + upward motion animation on load.
+---
 
-### 2. Brand Statement
-Centered italic text: "*Designed for clubs that care about every detail.*" — generous whitespace, understated elegance.
+## How It Works
 
-### 3. Problem Section
-Soft gray background with headline "*The Game Deserves Better.*" and three columns highlighting pain points: losing track of score, match interruptions, unorganized courts.
+```text
+User clicks button
+       ↓
+Modal opens with form
+       ↓
+User fills: Name, Email, Club Name, Location
+       ↓
+Clicks "Send Pre-Order Request"
+       ↓
+Formspree sends email to flipscorepadel@gmail.com
+       ↓
+Success message shown in modal
+```
 
-### 4. Solution Section
-Product render image alongside headline "*Introducing FlipScore.*" with body copy and minimal feature bullets (magnetic mounting, weather-resistant, clear numbers, padel-designed). CTA: "Upgrade Your Court."
+---
 
-### 5. Product Showcase
-Clean layout featuring the product render in different contexts — close-up detail, mounted view, studio shot — with subtle scroll/hover animations.
+## Files to Create / Edit
 
-### 6. Why FlipScore
-Four-column grid: Instant score updates, No batteries required, Built for outdoor play, Clean professional aesthetic. Minimal icons with short descriptions.
+### New file: `src/components/landing/PreOrderModal.tsx`
+A modal dialog built with the existing Radix UI Dialog component (already installed). Contains:
+- Form with 4 fields: Name, Email, Club Name, Location
+- Submits via `fetch` to a Formspree endpoint
+- Shows a success confirmation after submission
+- Styled consistently with the rest of the landing page (rounded-none, serif headings, brand colors)
 
-### 7. Use Cases
-Headline "*Built for Every Court.*" with three columns: Clubs, Coaches, Players — each with a short benefit statement.
+### Edited: `src/components/landing/Hero.tsx`
+- Import and render `PreOrderModal`
+- "Pre-Order Now" button opens the modal
 
-### 8. Testimonial / Social Proof
-Premium minimal quote block: "*A simple detail that completely changes the experience.*" — Club Director.
+### Edited: `src/components/landing/Solution.tsx`
+- Import and render `PreOrderModal`
+- "Upgrade Your Court" button opens the modal
 
-### 9. Final CTA
-Full-width deep forest green background section. Headline "*Elevate Your Court.*" with cream-colored "Pre-Order Now" button.
+### Edited: `src/components/landing/FinalCTA.tsx`
+- Import and render `PreOrderModal`
+- "Pre-Order Now" button opens the modal
 
-### 10. Footer
-Minimal footer with FlipScore logo, contact info, Instagram link, and email signup field.
+---
 
-## Interactions & Animation
-- Smooth scroll behavior
-- Fade-in animations on scroll for each section
-- Subtle hover effects on buttons and cards
-- Slow, premium transitions throughout — nothing flashy
+## Formspree Setup (One-Time, Free)
+
+To activate email delivery, you'll need to:
+
+1. Go to [formspree.io](https://formspree.io) and sign up for a free account
+2. Create a new form — it will give you a short endpoint ID (e.g. `xpwzgkqb`)
+3. Paste that ID into the code where indicated
+
+Until you do this, the form will still show and submit — it just won't send emails yet. I can hardcode a placeholder so it's ready for your ID.
+
+---
 
 ## Technical Notes
-- Static landing page — no backend needed
-- Google Fonts loaded for Playfair Display + Inter
-- Fully responsive design (mobile-first)
-- Product images and logo embedded as project assets
 
+- Uses the existing `@radix-ui/react-dialog` (already installed — no new packages needed)
+- Uses the existing `react-hook-form` + `zod` for validation (already installed)
+- All 4 fields are required with basic validation (valid email format, non-empty strings)
+- Form resets and shows a thank-you message on success
+- Modal is fully responsive and accessible
