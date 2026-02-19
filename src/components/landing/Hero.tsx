@@ -34,35 +34,35 @@ const Hero = () => {
         muted
         playsInline
         preload="auto"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
+        className="absolute inset-0 h-full w-full object-cover" />
+
       {/* Overlay so text stays readable */}
       <div className="absolute inset-0 bg-background/60" />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center w-full max-w-3xl">
-        <motion.img
-          src={logo}
-          alt="FlipScore logo"
-          className="mb-10 w-full max-w-3xl h-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        />
+        
+
+
+
+
+
+
+
         <motion.h1
           className="font-serif-display w-full text-center text-5xl font-medium leading-tight tracking-tight md:text-7xl"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-        >
+          transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}>
+
           Effortless Padel Scoring.
         </motion.h1>
         <motion.p
           className="mt-6 max-w-lg text-center text-lg leading-relaxed text-secondary md:text-xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        >
+          transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}>
+
           A refined scoreboard designed for modern courts.
           <br />
           Keep every match clear, elegant, and uninterrupted.
@@ -71,22 +71,22 @@ const Hero = () => {
           className="mt-10 flex flex-col items-center gap-4 sm:flex-row"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        >
+          transition={{ duration: 1, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}>
+
           <Button size="lg" className="rounded-none px-10 py-6 text-base tracking-wide">
             Pre-Order Now
           </Button>
           <Button
             variant="outline"
             size="lg"
-            className="rounded-none border-foreground/30 px-10 py-6 text-base tracking-wide hover:bg-foreground/5"
-          >
+            className="rounded-none border-foreground/30 px-10 py-6 text-base tracking-wide hover:bg-foreground/5">
+
             View Product
           </Button>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default Hero;
