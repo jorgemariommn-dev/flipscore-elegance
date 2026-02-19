@@ -15,7 +15,7 @@ const Footer = () => (
         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-secondary transition-colors hover:text-foreground">
           <Instagram className="h-5 w-5" strokeWidth={1.5} />
         </a>
-        <a href="mailto:hello@flipscore.com" aria-label="Email" className="text-secondary transition-colors hover:text-foreground">
+        <a href="mailto:flipscorepadel@gmail.com" aria-label="Email" className="text-secondary transition-colors hover:text-foreground">
           <Mail className="h-5 w-5" strokeWidth={1.5} />
         </a>
       </div>
