@@ -44,7 +44,7 @@ const Hero = () => {
         <motion.img
           src={logo}
           alt="FlipScore logo"
-          className="mb-10 w-full max-w-3xl h-auto [mix-blend-mode:screen]"
+          className="mb-10 w-full max-w-3xl h-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
