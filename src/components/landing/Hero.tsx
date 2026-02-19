@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/flipscore-logo-transparent-green.png";
+import logo from "@/assets/flipscore-logo-green.jpg";
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -44,7 +44,7 @@ const Hero = () => {
         <motion.img
           src={logo}
           alt="FlipScore logo"
-          className="mb-10 w-full max-w-3xl h-auto mix-blend-multiply"
+          className="mb-10 w-full max-w-3xl h-auto [mix-blend-mode:screen]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
