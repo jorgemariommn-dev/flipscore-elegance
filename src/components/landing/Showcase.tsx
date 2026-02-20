@@ -1,12 +1,12 @@
 import ScrollReveal from "./ScrollReveal";
 import closeupImg from "@/assets/showcase-closeup.png";
+import logoImg from "@/assets/showcase-logo.png";
 import studioImg from "@/assets/showcase-studio.png";
-import mountedImg from "@/assets/showcase-mounted-real.png";
 
 const images = [
   { src: closeupImg, alt: "FlipScore close-up detail", aspect: "aspect-[4/5]" },
-  { src: studioImg, alt: "FlipScore studio shot", aspect: "aspect-square" },
-  { src: mountedImg, alt: "FlipScore mounted view", aspect: "aspect-[4/5]" },
+  { src: logoImg, alt: "FlipScore logo", aspect: "aspect-square" },
+  { src: studioImg, alt: "FlipScore studio shot", aspect: "aspect-[4/5]" },
 ];
 
 const Showcase = () =>
