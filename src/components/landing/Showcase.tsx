@@ -1,6 +1,6 @@
 import ScrollReveal from "./ScrollReveal";
 import closeupImg from "@/assets/showcase-closeup.png";
-import logoImg from "@/assets/showcase-logo.png";
+import logoImg from "@/assets/showcase-logo-nobg.png";
 import studioImg from "@/assets/showcase-studio.png";
 
 const images = [
