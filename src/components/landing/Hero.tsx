@@ -2,10 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PreOrderModal from "./PreOrderModal";
+import { useIsMobile } from "@/hooks/use-mobile";
+import showcaseMounted from "@/assets/showcase-mounted-real.png";
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [modalOpen, setModalOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const video = videoRef.current;
@@ -28,14 +31,22 @@ const Hero = () => {
   return (
     <>
       <section className="relative flex min-h-screen flex-col items-center justify-center px-6 py-24 overflow-hidden">
-        <video
-          ref={videoRef}
-          src="/hero-bg.mov"
-          muted
-          playsInline
-          preload="auto"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+        {isMobile ? (
+          <img
+            src={showcaseMounted}
+            alt="FlipScore background"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        ) : (
+          <video
+            ref={videoRef}
+            src="/hero-bg.mov"
+            muted
+            playsInline
+            preload="auto"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        )}
         <div className="absolute inset-0 bg-background/60" />
         <div className="relative z-10 flex flex-col items-center w-full max-w-3xl">
           <motion.h1
