@@ -20,7 +20,7 @@ const Showcase = () =>
       <div className="mt-16 grid gap-6 md:grid-cols-3">
         {images.map((item, i) =>
           <ScrollReveal key={item.alt} delay={i * 0.15}>
-            <div className={`group relative overflow-hidden ${item.aspect}`}>
+            <div className={`group relative overflow-hidden ${item.aspect} bg-muted/50`}>
               <img
                 src={item.src}
                 alt={item.alt}
