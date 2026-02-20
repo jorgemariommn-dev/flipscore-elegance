@@ -1,7 +1,7 @@
 import ScrollReveal from "./ScrollReveal";
 import closeupImg from "@/assets/showcase-closeup.png";
 import studioImg from "@/assets/showcase-studio.png";
-import mountedImg from "@/assets/showcase-mounted.png";
+import mountedImg from "@/assets/showcase-mounted-real.png";
 
 const images = [
   { src: closeupImg, alt: "FlipScore close-up detail", aspect: "aspect-[4/5]" },
@@ -20,7 +20,7 @@ const Showcase = () =>
       <div className="mt-16 grid gap-6 md:grid-cols-3">
         {images.map((item, i) =>
           <ScrollReveal key={item.alt} delay={i * 0.15}>
-            <div className={`group relative overflow-hidden ${item.aspect} bg-foreground/5`}>
+            <div className={`group relative overflow-hidden ${item.aspect}`}>
               <img
                 src={item.src}
                 alt={item.alt}
